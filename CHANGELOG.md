@@ -1,3 +1,23 @@
+# Changelog
+
+## [1.3.0](https://github.com/akshay-pathak-techno/github-workflow/compare/v1.2.0...v1.3.0) (2024-08-09)
+
+
+### Features
+
+* **chag:** [[#233](https://github.com/akshay-pathak-techno/github-workflow/issues/233)] changes ([a6aed8a](https://github.com/akshay-pathak-techno/github-workflow/commit/a6aed8ae15d1cb6a0758dc28cc7bd45117d1bcb5))
+* **pac:** new ([4ea836a](https://github.com/akshay-pathak-techno/github-workflow/commit/4ea836a49556c5d8d665e1ab376f3699cc714272))
+* **setup:** [123] changelog changes ([c1a3a20](https://github.com/akshay-pathak-techno/github-workflow/commit/c1a3a204e37375804cd723943b6da6c69cc94f1c))
+* **setup:** index file changes ([adab974](https://github.com/akshay-pathak-techno/github-workflow/commit/adab974ba2581d7ad664308a742a3680a30fe22a))
+* **squash:** testing ([d2a056d](https://github.com/akshay-pathak-techno/github-workflow/commit/d2a056d6d0526b015e6bd39f8dc9bcf3271d6c8e))
+* **test:** testing ([0fab99d](https://github.com/akshay-pathak-techno/github-workflow/commit/0fab99de88c041a25dc12052cc54433474e13782))
+
+
+### Bug Fixes
+
+* **changes:** fix changes ([d861ed8](https://github.com/akshay-pathak-techno/github-workflow/commit/d861ed8ab9779b91d98f1db401869c381de034af))
+* **test:** testing something ([147bb04](https://github.com/akshay-pathak-techno/github-workflow/commit/147bb0404608da466ace6b8a6138b8341da558a5))
+
 ### Changelog
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
