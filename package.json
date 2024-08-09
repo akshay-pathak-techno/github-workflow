@@ -1,7 +1,7 @@
 {
   "name": "github-workflow",
   "version": "1.2.0",
-  "description": "testing github workflow",
+  "description": "testing githubs workflow",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
