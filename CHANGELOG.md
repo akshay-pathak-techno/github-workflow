@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/akshay-pathak-techno/github-workflow/compare/v1.0.0...v1.1.0) (2024-08-09)
+
+
+### Features
+
+* **advance:** some advance feature ([a1a374f](https://github.com/akshay-pathak-techno/github-workflow/commit/a1a374fd2cf517bf9e0fe14a4d59dbd3accfc2e0))
+
 ## 1.0.0 (2024-08-09)
 
 
