@@ -1,0 +1,24 @@
+{
+  "name": "github-workflow",
+  "version": "1.0.0",
+  "description": "testing github workflow",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshay-pathak-techno/github-workflow.git"
+  },
+  "keywords": [
+    "release",
+    "please"
+  ],
+  "author": "Akshay Pathak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshay-pathak-techno/github-workflow/issues"
+  },
+  "homepage": "https://github.com/akshay-pathak-techno/github-workflow#readme"
+}
