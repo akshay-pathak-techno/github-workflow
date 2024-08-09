@@ -2,11 +2,76 @@ on:
   push:
     branches:
       - main
-name: release-please
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: Release Please
+
 jobs:
-  release-please:
+  build:
+    name: 🏗️ Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        runs-on: [foo, bar, moo, boo, doo]
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Make a file with a lot of repeated text
+        run: |
+          for i in {1..1000}; do echo -n '${{ matrix.runs-on }}' >> ${{ matrix.runs-on }}.txt; done
+      - uses: actions/upload-artifact@v4
         with:
+          name: my-artifact-${{ matrix.runs-on }}
+          path: ./${{ matrix.runs-on }}.txt
+          compression-level: 0 # 9 = maximum compression
+
+  release:
+    name: 📦 Release
+    runs-on: ubuntu-latest
+    needs: build
+    outputs:
+      upload-url: ${{ steps.release.outputs.upload_url }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           release-type: simple
+          config-file: .release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+      - name: Print the release URL if present
+        if: ${{ steps.release.outputs.upload_url }}
+        run: |
+          echo "Upload URL: ${{ steps.release.outputs.upload_url }}"
+
+  upload:
+    name: 🚀 Upload Artifacts
+    runs-on: ubuntu-latest
+    if: ${{ needs.release.outputs.upload-url }}
+    needs: release
+    strategy:
+      matrix:
+        runs-on: [foo, bar, moo, boo, doo]
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: my-artifact
+          pattern: my-artifact-*
+          merge-multiple: true
+
+      - name: Print out ${{ matrix.runs-on }}.txt
+        run: |
+          cat my-artifact/${{ matrix.runs-on }}.txt
+
+      - uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ needs.release.outputs.upload-url }}
+          asset_path: ./my-artifact/${{ matrix.runs-on }}.txt
+          asset_name: ${{ matrix.runs-on }}.txt
+          asset_content_type: text/plain
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
