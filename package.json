@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "auto-changelog  --commit-limit false --issue-url https://platform.godeck.app/tasks/detail/{id}"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/akshay-pathak-techno/github-workflow/issues"
   },
-  "homepage": "https://github.com/akshay-pathak-techno/github-workflow#readme"
+  "homepage": "https://github.com/akshay-pathak-techno/github-workflow#readme",
+  "dependencies": {
+    "auto-changelog": "^2.4.0"
+  }
 }
