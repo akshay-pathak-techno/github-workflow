@@ -12,7 +12,7 @@
     "output": "CHANGELOG.md",
     "unreleased": true,
     "issueUrl": "https://issues.apache.org/jira/browse/{id}",
-    "issuePattern": "\\[\\d+\\]",
+    "issuePattern": "[A-Z]+-\\d+",
     "commitLimit": false
   },
   "repository": {
