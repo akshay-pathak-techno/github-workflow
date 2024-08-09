@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/akshay-pathak-techno/github-workflow/compare/v1.1.0...v1.2.0) (2024-08-09)
+
+
+### Features
+
+* **change:** checking the release config ([1debf19](https://github.com/akshay-pathak-techno/github-workflow/commit/1debf197e97e32c8aad95a8479913de70a981590))
+
 ## [1.1.0](https://github.com/akshay-pathak-techno/github-workflow/compare/v1.0.0...v1.1.0) (2024-08-09)
 
 
